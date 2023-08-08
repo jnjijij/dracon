@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .black-block {
+      width: 1440px;
+      height: 72px;
+      background-color: black;
+      position: relative;
+    }
+
+    .istaix {
+      width: 63px;
+      height: 21px;
+      position: absolute;
+      top: 26px;
+      left: 178px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 21px;
+      letter-spacing: 0;
+      text-align: left;
+      color: white;
+    }
+
+    .buttons-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 72px;
+    }
+
+    .button {
+      width: 48px;
+      height: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0;
+      text-align: center;
+      margin: 0 10px;
+      color: white;
+    }
+
+    .get-started {
+      width: 149px;
+      height: 41px;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      position: absolute;
+      top: 16px;
+      left: 1156px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0;
+      text-align: left;
+      padding: 10px;
+    }
+
+    .see-our-work {
+      width: 246px;
+      height: 67px;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      position: absolute;
+      top: 619px;
+      left: 135px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 67px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    .white-blocks-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-top: 100px;
+    }
+
+    .white-block {
+      width: 1440px;
+      height: 577px;
+      background-color: white;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .achievements {
+      width: 421px;
+      height: 128px;
+      position: absolute;
+      top: 924px;
+      left: 135px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 64px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    .number-blocks {
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      top: 919px;
+      left: 829px;
+    }
+
+    .number-block {
+      width: 128px;
+      height: 69px;
+      background-color: white;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 69px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    .trusted-clients {
+      width: 1170px;
+      height: 188px;
+      background-color: white;
+      border-radius: 5px;
+      border: 1px solid black;
+      position: absolute;
+      top: 1244px;
+      left: 135px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 188px;
+      letter-spacing: 0;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .bottom-blocks {
+      display: flex;
+      position: absolute;
+      top: 1358px;
+      left: 170px;
+    }
+
+    .bottom-block {
+      width: 168px;
+      height: 37.017391204833984px;
+      background-color: white;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 37.017391204833984px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    .construction-blocks {
+      display: flex;
+      position: absolute;
+      top: 1582px;
+      left: 135px;
+      gap: 24px;
+    }
+
+    .construction-column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .construction-title {
+      width: 312px;
+      height: 605px;
+      background-color: white;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 605px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    .read-more {
+      width: 86px;
+      height: 28px;
+      background-color: white;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0;
+      text-align: left;
+      margin-top: 10px;
+      padding-left: 5px;
+      cursor: pointer;
+    }
+
+    .help-block {
+      width: 1170px;
+      height: 563px;
+      background-color: #f0f9eb;
+      border-radius: 8px;
+      border: 1px solid black;
+      position: absolute;
+      top: 2350px;
+      left: 135px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .help-text {
+      width: 509px;
+      height: 64px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 64px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    .client-block {
+      width: 684px;
+      height: 64px;
+      background-color: #c0e9c5;
+      border-radius: 8px 8px 0 0;
+      position: absolute;
+      top: 3140px;
+      left: 378px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 64px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    .client-text-block {
+      width: 843px;
+      height: 247px;
+      background-color: white;
+      border-radius: 10px;
+      border: 1px solid black;
+      position: absolute;
+      top: 3256px;
+      left: 298px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .client-quote {
+      width: 720.59716796875px;
+      height: 175.64443969726562px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    .quote-author {
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .contact-block {
+      width: 1170px;
+      height: 288px;
+      background-color: #f0f9eb;
+      position: absolute;
+      top: 3790px;
+      left: 135px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact-text {
+      width: 540px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 64px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    .email-input {
+      width: 300px;
+      height: 40px;
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0;
+    }
+
+    .waitlist-button {
+      width: fit-content;
+      height: fit-content;
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0;
+      cursor: pointer;
+    }
+    </style>
+    </head>
+    <body>
+    <div class="black-block">
+    <div class="istaix">ISTAIX</div>
+    <div class="buttons-container">
+    <div class="button">Home</div>
+    <div class="button">Products</div>
+    <div class="button">Jobs</div>
+    <div class="button">Pricing</div>
+    <div class="button">About</div>
+    </div>
+    <div class="get-started">Get Started</div>
+    </div>
+    <div class="see-our-work">See Our Work</div>
+    <div class="white-blocks-container">
+    <div class="white-block">
+    <div class="achievements">Over a Decade of Achievements</div>
+    <div class="number-blocks">
+    <div class="number-block">10,000+</div>
+    <div class="number-block">2 Million</div>
+    <div class="number-block">500+</div>
+    <div class="number-block">140</div>
+    </div>
+    </div>
+    <div class="client-block">Few Words From Our Clients</div>
+    <div class="trusted-clients">OUR TRUSTED CLIENTS</div>
+    <div class="bottom-blocks">
+    <div class="bottom-block">SPARK</div>
+    <div class="bottom-block">LOGAZ</div>
+    <div class="bottom-block">SPONA</div>
+    <div class="bottom-block">OLLA</div>
+    </div>
+    <div class="construction-blocks">
+    <div class="construction-column">
+    <div class="construction-title">Canadian Construction Branches</div>
+    <div class="read-more">Read More</div>
+    </div>
+    <div class="construction-column">
+    <div class="construction-title">Australian Construction Branches</div>
+    <div class="read-more">Read More</div>
+    </div>
+    <div class="construction-column">
+    <div class="construction-title">Brazilian Construction Branches</div>
+    <div class="read-more">Read More</div>
+    </div>
+    </div>
+    <div class="help-block">
+    <div class="help-text">Let us help you build.</div>
+    </div>
+    <div class="client-text-block">
+    <div class="client-quote">
+                             We had an incredible experience working with them and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the product concept so quickly. It acted as a catalyst to take our design to the next level and get more eyes on our product.
+    </div>
+    <div class="quote-author">- Client Name</div>
+    </div>
+    <div class="contact-block">
+    <div class="contact-text">Get a Free Quote Now! Your work email address</div>
+    <input type="email" class="email-input" placeholder="Your work email address">
+    <div class="waitlist-button">Join the waitlist</div>
+    </div>
+    </div>
+    </body>
+    </html>
+    }
+
+
