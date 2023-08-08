@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Чорний блок з вкладеними блоками та зображенням</title>
+  <style>
+    /* Reset default margin and padding */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    /* Center all content on the page /
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f1f1f1; / Set a background color for the page */
+    }
+
+    /* Main black block /
+    .main-block {
+        width: 100%;
+        height: 100%;
+        background-color: #000; / Changed the color to black */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    }
+
+    /* Black block with buttons /
+    .black-block {
+        width: 100%;
+        background-color: #0000FF; / Changed the color to blue /
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 10px;
+        box-sizing: border-box;
+        flex-shrink: 0; / Ensure the buttons don't shrink */
+    }
+
+    /* Button styles */
+    .button {
+      font-family: Helvetica;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: center;
+      padding: 16px 33px;
+      border-radius: 36px;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    .button-black {
+      background: linear-gradient(98.88deg, #8C01FA -2.99%, #000000 102.28%);
+      border: 1px solid #000000;
+    }
+
+    .button-violet {
+      background-color: #8C01FA; /* Violet color */
+      border: 1px solid #8C01FA;
+    }
+
+    /* Text styles */
+    .text1 {
+      font-family: Helvetica;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 46px;
+      letter-spacing: 1px;
+      text-align: center;
+      color: #FFFFFF;
+      margin: 20px;
+    }
+
+    /* Additional styles */
+    .image-1 {
+      width: 20px;
+      height: 20px;
+      background-image: url('image1.jpg');
+      background-size: cover;
+    }
+
+    /* New black block /
+    .new-black-block {
+        width: 100%;
+        background-color: #000; / Changed the color to black /
+        height: 300px; / Set the height of the new black block /
+        display: flex;
+        justify-content: flex-start; / Align items to the top-left corner /
+        align-items: flex-start;
+        padding: 20px; / Add some padding for spacing */
+    }
+
+    /* Text styles for the second block */
+    .text2 {
+      font-family: Helvetica;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 1px;
+      text-align: center;
+      color: #FFFFFF;
+      margin: 20px;
+    }
+
+    /* Small blue block /
+    .small-blue-block {
+        width: 50%;
+        background-color: #0000FF;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 5px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        flex-shrink: 0; / Ensure the buttons don't shrink */
+    }
+
+    /* Media query for responsiveness */
+    @media (max-width: 768px) {
+      .main-block {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="main-block">
+  <!-- Small blue block with violet buttons -->
+  <div class="small-blue-block">
+    <button class="button button-violet">Learn</button>
+    <button class="button button-violet">Build</button>
+    <button class="button button-violet">Network</button>
+    <button class="button button-violet">Community</button>
+  </div>
+  <!-- Black block with buttons -->
+  <div class="black-block">
+    <button class="button button-black">Build</button>
+    <button class="button button-black">Network</button>
+    <button class="button button-black">Community</button>
+    <button class="button button-black">Learn</button>
+  </div>
+  <!-- Nested block with text -->
+  <div class="inner-block-1">
+    <div class="image-1"></div>
+    <div class="text1">Powerful for developers. Fast for everyone. Bring blockchain to the people. Solana supports experiences for power users, new consumers, and everyone in between. Start building. Read docs.</div>
+  </div>
+  <!-- New black block -->
+  <div class="new-black-block">
+    <div class="text2" style="float: right;">Don’t keep your users waiting. Solana has block times of 400 milliseconds — and as hardware gets faster, so will the network.</div>
+    <div class="text2">Join in the community of millions</div>
+  </div>
+  <!-- Another new black block -->
+  <div class="new-black-block">
+    <div class="text2">Build for growth</div>
+  </div>
+  <!-- Yet another new black block -->
+  <div class="new-black-block">
+    <div class="text2">It’s time to bridge the digital and physical. Anybodies helps established brands like Toys’R’Us connect real-life places and products with NFTs.</div>
+  </div>
+  <!-- Another black block -->
+  <div class="new-black-block">
+    <div class="text2">It's time to join the thousands of creators, artists, and developers using Solana.</div>
+    <button class="button button-violet">Start Building</button>
+  </div>
+  <!-- Bottom black block -->
+  <div class="new-black-block" style="height: 600px;">
+    <div class="text2" style="float: right;">Managed by Solana Foundation</div>
+    <div class="text2">Get Connected Solana Break Solana Careers Disclaimer Blog</div>
+  </div>
+  <!-- New block for "Build for Growth" -->
+  <div class="new-black-block">
+    <div class="text2" style="float: left;">Build for Growth</div>
+  </div>
+</div>
+</body>
+</html>
