@@ -1,0 +1,101 @@
+function task1() {
+    let result = '';
+    for (let i = 0; i < 10; i++) {
+        result += `<div>Block ${i + 1}</div>`;
+    }
+    return result;
+}
+
+function task2() {
+    let result = '';
+    for (let i = 0; i < 10; i++) {
+        result += `<div>Block ${i + 1}: Index ${i}</div>`;
+    }
+    return result;
+}
+
+function task3() {
+    let result = '';
+    let count = 0;
+    while (count < 20) {
+        result += `<h1>Heading ${count + 1}</h1>`;
+        count++;
+    }
+    return result;
+}
+
+function task4() {
+    let result = '';
+    let count = 0;
+    while (count < 20) {
+        result += `<h1>Heading ${count + 1}: Index ${count}</h1>`;
+        count++;
+    }
+    return result;
+}
+
+function task5() {
+    let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+    let result = '<ul>';
+    for (let item of listOfItems) {
+        result += `<li>${item}</li>`;
+    }
+    result += '</ul>';
+    return result;
+}
+
+function task6() {
+    let products = [
+        // об'єкти продуктів...
+    ];
+
+    let result = '';
+    for (let product of products) {
+        result += `
+            <div class="product-card">
+                <h3 class="product-title">${product.title}. Price - ${product.price}</h3>
+                <img src="${product.image}" alt="" class="product-image">
+            </div>
+        `;
+    }
+    return result;
+}
+
+function task7() {
+    let users = [
+        // об'єкти користувачів...
+    ];
+
+    let result = '<h3>Users with status true:</h3>';
+    for (let user of users) {
+        if (user.status) {
+            result += `<p>${user.name}</p>`;
+        }
+    }
+
+    result += '<h3>Users with status false:</h3>';
+    for (let user of users) {
+        if (!user.status) {
+            result += `<p>${user.name}</p>`;
+        }
+    }
+
+    result += '<h3>Users older than 30:</h3>';
+    for (let user of users) {
+        if (user.age > 30) {
+            result += `<p>${user.name}</p>`;
+        }
+    }
+
+    return result;
+}
+
+document.getElementById('task-container').innerHTML = `
+    ${task1()}
+    ${task2()}
+    ${task3()}
+    ${task4()}
+    ${task5()}
+    ${task6()}
+    ${task7()}
+`;
