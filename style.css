@@ -1,0 +1,85 @@
+/* Reset some default styles */
+body, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styles for user blocks */
+.user {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 45%; /* To display two users per row */
+    display: inline-block;
+    background-color: #f9f9f9;
+}
+
+/* Style for user name */
+.user-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style for user details button */
+.user-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Style for user-details.html */
+.user-details {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style for post blocks */
+.post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 19%; /* To display five posts per row */
+    display: inline-block;
+    background-color: #f9f9f9;
+}
+
+/* Style for post title */
+.post-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style for post details button */
+.post-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Style for post-details.html */
+.post-details {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style for comment blocks */
+.comment {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 24%; /* To display four comments per row */
+    display: inline-block;
+    background-color: #f9f9f9;
+}
+
+/* Add more styles as needed for your project */
