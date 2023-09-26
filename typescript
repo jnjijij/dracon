@@ -1,0 +1,25 @@
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  selector: 'app-user-form',
+  templateUrl: './user-form.component.html',
+})
+export class UserFormComponent {
+  users: any[] = []; // Ваш масив користувачів
+  selectedUser: any = null;
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    // Отримайте дані користувачів з jsonPlaceholder
+    this.http.get('https://jsonplaceholder.typicode.com/users').subscribe((data: any[]) => {
+      this.users = data;
+    });
+  }
+
+  onSubmit(userId: number) {
+    // Знайдіть вибраного користувача за ID
+    this.selectedUser = this.users.find((user) => user.id === userId);
+  }
+}
