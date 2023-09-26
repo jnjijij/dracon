@@ -1,0 +1,16 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label for="user">Оберіть користувача:</label>
+  <select id="user" name="user" formControlName="user">
+    <option [ngValue]="null" disabled>Виберіть користувача</option>
+    <option *ngFor="let user of users" [ngValue]="user.id">{{ user.name }}</option>
+  </select>
+  <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>
+
+<div *ngIf="selectedUser">
+  <h2>Детальна інформація про користувача:</h2>
+  <p><strong>ID:</strong> {{ selectedUser.id }}</p>
+  <p><strong>Name:</strong> {{ selectedUser.name }}</p>
+  <p><strong>Email:</strong> {{ selectedUser.email }}</p>
+  <!-- Додайте інші поля користувача за потребою -->
+</div>
