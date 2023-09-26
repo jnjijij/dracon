@@ -1,0 +1,31 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-user-form',
+  templateUrl: './user-form.component.html',
+})
+export class UserFormComponent implements OnInit {
+  userForm: FormGroup;
+  users: any[] = []; // Ваш масив користувачів
+  selectedUser: any = null;
+
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit() {
+    this.userForm = this.fb.group({
+      user: [null, Validators.required],
+    });
+
+    // Отримайте дані користувачів з jsonPlaceholder
+    this.http.get('https://jsonplaceholder.typicode.com/users').subscribe((data: any[]) => {
+      this.users = data;
+    });
+  }
+
+  onSubmit() {
+    const userId = this.userForm.get('user').value;
+    // Знайдіть вибраного користувача за ID
+    this.selectedUser = this.users.find((user) => user.id === userId);
+  }
+}
