@@ -1,0 +1,15 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <label for="user">Оберіть користувача:</label>
+  <select id="user" name="user" ngModel>
+    <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+  </select>
+  <button type="submit">Submit</button>
+</form>
+
+<div *ngIf="selectedUser">
+  <h2>Детальна інформація про користувача:</h2>
+  <p><strong>ID:</strong> {{ selectedUser.id }}</p>
+  <p><strong>Name:</strong> {{ selectedUser.name }}</p>
+  <p><strong>Email:</strong> {{ selectedUser.email }}</p>
+  <!-- Додайте інші поля користувача за потребою -->
+</div>
