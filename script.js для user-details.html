@@ -1,0 +1,35 @@
+const urlParams = new URLSearchParams(window.location.search);
+const userId = urlParams.get('id');
+
+if (!userId) {
+  alert('User ID not found.');
+  window.location.href = 'index.html';
+}
+
+// Функція для відображення деталей користувача
+function showUserDetails(user) {
+  const userContainer = document.querySelector('.user-info');
+  userContainer.innerHTML = `
+    <h2>User Details</h2>
+    <p>ID: ${user.id}</p>
+    <p>Name: ${user.name}</p>
+    <p>Username: ${user.username}</p>
+    <p>Email: ${user.email}</p>
+    <p>Phone: ${user.phone}</p>
+    <p>Website: ${user.website}</p>
+    <p>Address: ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}</p>
+    <p>Company: ${user.company.name}, ${user.company.catchPhrase}, ${user.company.bs}</p>
+  `;
+
+  const showPostsBtn = document.getElementById('show-posts');
+  showPostsBtn.addEventListener('click', () => {
+    window.location.href = `user-posts.html?id=${userId}`;
+  });
+}
+
+// Запит до сервера для отримання деталей користувача
+fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+  .then(response => response.json())
+  .then(user => {
+    showUserDetails(user);
+  });
