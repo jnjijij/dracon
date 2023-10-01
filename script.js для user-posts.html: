@@ -1,0 +1,15 @@
+const urlParams = new URLSearchParams(window.location.search);
+const userId = urlParams.get('id');
+
+if (!userId) {
+  alert('User ID not found.');
+  window.location.href = 'index.html';
+}
+
+// Функція для відображення постів користувача
+function showUserPosts(posts) {
+  const userPostsContainer = document.querySelector('.user-posts');
+
+  posts.forEach(post => {
+    const postDiv = document.createElement('div');
+    postDiv.classList.add
