@@ -1,0 +1,29 @@
+// Запит до сервера для отримання списку користувачів
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(users => {
+    const userContainer = document.querySelector('.user-list');
+
+    users.forEach(user => {
+      const userDiv = document.createElement('div');
+      userDiv.classList.add('user');
+
+      const userId = document.createElement('p');
+      userId.textContent = `ID: ${user.id}`;
+
+      const userName = document.createElement('p');
+      userName.textContent = `Name: ${user.name}`;
+
+      const userDetailsBtn = document.createElement('button');
+      userDetailsBtn.textContent = 'User Details';
+
+      userDetailsBtn.addEventListener('click', () => {
+        window.location.href = `user-details.html?id=${user.id}`;
+      });
+
+      userDiv.appendChild(userId);
+      userDiv.appendChild(userName);
+      userDiv.appendChild(userDetailsBtn);
+      userContainer.appendChild(userDiv);
+    });
+  });
