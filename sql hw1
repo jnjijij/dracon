@@ -1,0 +1,11 @@
+SELECT * FROM users WHERE age < 20;
+SELECT * FROM users WHERE parent1_name = 'Tamara' OR parent2_name = 'Tamara' OR parent1_name = 'Petro' OR parent2_name = 'Petro';
+SELECT * FROM users WHERE studying LIKE '%js%';
+UPDATE users SET studying = CONCAT(studying, ', java') WHERE LENGTH(studying) = LENGTH(REPLACE(studying, ',', '')) AND studying <> '';
+SELECT * FROM users WHERE house_number BETWEEN 1 AND 20;
+SELECT * FROM users WHERE street_name LIKE '% %';
+DELETE FROM users WHERE studying IS NULL;
+SELECT * FROM users WHERE parent1_name LIKE '%na' OR parent2_name LIKE '%na';
+UPDATE users SET studying = IFNULL(CONCAT(studying, ', Python'), 'Python') WHERE studying NOT LIKE '%Python%';
+SELECT * FROM users ORDER BY rating ASC, apartment_number ASC;
+
