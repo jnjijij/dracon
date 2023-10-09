@@ -1,0 +1,17 @@
+SELECT * FROM children WHERE average_grade = 4.2;
+SELECT * FROM children WHERE class = 1;
+SELECT * FROM children WHERE subjects LIKE '%фізика%';
+SELECT * FROM children WHERE parent_profession = 'scientist';
+SELECT * FROM children WHERE average_grade > 4;
+SELECT * FROM children ORDER BY average_grade DESC LIMIT 1;
+SELECT * FROM children ORDER BY average_grade ASC LIMIT 1;
+SELECT * FROM children ORDER BY average_grade DESC LIMIT 3;
+SELECT AVG(average_grade) FROM children;
+SELECT AVG(average_grade) FROM children WHERE subjects LIKE '%математика%' OR subjects LIKE '%фізика%';
+SELECT AVG(average_grade) FROM children WHERE class = 2;
+SELECT * FROM children WHERE parent1 IS NULL OR parent2 IS NULL;
+SELECT * FROM parents WHERE profession IS NULL;
+DELETE FROM children WHERE average_grade < 2.5;
+UPDATE children SET average_grade = 5 WHERE parent_profession = 'teacher';
+SELECT * FROM children WHERE class <= 5 AND subjects LIKE '%фізика%';
+SELECT class, AVG(average_grade) as avg_grade FROM children GROUP BY class ORDER BY avg_grade DESC LIMIT 1;
