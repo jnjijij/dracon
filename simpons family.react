@@ -1,0 +1,48 @@
+import React from 'react';
+
+function SimpsonFamily() {
+  const simpsons = [
+    {
+      name: "Гомер Сімпсон",
+      age: 40,
+      job: "Робітник в атомній електростанції",
+    },
+    {
+      name: "Мардж Сімпсон",
+      age: 38,
+      job: "Домогосподарка",
+    },
+    {
+      name: "Барт Сімпсон",
+      age: 10,
+      grade: 4,
+    },
+    {
+      name: "Ліза Сімпсон",
+      age: 8,
+      grade: 2,
+    },
+    {
+      name: "Меґґі Сімпсон",
+      age: 1,
+    },
+  ];
+
+  return (
+    <div>
+      <h1>Сім'я Сімпсонів</h1>
+      <ul>
+        {simpsons.map((character, index) => (
+          <li key={index}>
+            <h2>{character.name}</h2>
+            <p>Вік: {character.age}</p>
+            {character.job && <p>Робота: {character.job}</p>}
+            {character.grade && <p>Клас: {character.grade}</p>}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default SimpsonFamily;
