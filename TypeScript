@@ -1,0 +1,36 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
+@Component({
+  selector: 'app-comment-create',
+  templateUrl: './comment-create.component.html',
+  styleUrls: ['./comment-create.component.css']
+})
+export class CommentCreateComponent implements OnInit {
+
+  form: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
+
+  ngOnInit() {
+    this.form = this.fb.group({
+      text: ['', [Validators.required]]
+    });
+  }
+
+  createComment() {
+    const comment = {
+      text: this.form.get('text').value
+    };
+
+    // відправка постового запиту
+    fetch('http://jsonplaceholder.typicode.com/comments', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(comment)
+    })
+      .then(response => response.json())
+      .then(comment => {
+        console.log(comment
