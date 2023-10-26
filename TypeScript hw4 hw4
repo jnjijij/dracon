@@ -1,0 +1,50 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-comments',
+  templateUrl: './comments.component.html',
+  styleUrls: ['./comments.component.css']
+})
+export class CommentsComponent implements OnInit {
+
+  comments: any[] = [];
+
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    // отримуємо дані з API
+    fetch('https://jsonplaceholder.typicode.com/comments')
+      .then(response => response.json())
+      .then(comments => {
+        this.comments = comments;
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
+  // обробник події переходу на маршрут альбомів
+  goToAlbums() {
+    this.router.navigate(['albums']);
+  }
+
+  // обробник події переходу на маршрут коментарів
+  goToTodos() {
+    this.router.navigate(['todos']);
+  }
+
+  // обробник події натискання на коментар
+  onCommentClick(comment: any) {
+    // отримуємо id поста, до якого належить коментар
+    const postId = comment.postId;
+
+    // робимо запит на отримання поста
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+      .then(response => response.json())
+      .then(post => {
+        // відправляємо користувача на маршрут поста
+        this.router.navigate(['posts', post.id]);
+      })
+      .catch(error => {
+        console.log(error);
